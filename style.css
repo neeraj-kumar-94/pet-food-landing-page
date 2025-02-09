@@ -4,16 +4,25 @@
     box-sizing: border-box;
 }
 
-h1,
-h2,
-p {
-    color: white;
+.text-wh{
+    color: #fff;
+}
+.text-green{
+    color: #173b33;
+    font-weight: 500;
 }
 
+.text-gray{
+    color: #39383c;
+}
+
+
+
+
+ 
 .heading-h1 {
     font-size: 56px;
-    line-height: 70px;
-    color: #ffffff;
+    line-height: 70px; 
     font-weight: 700;
     font-family: 'Source Serif Pro', serif;
 }
@@ -22,8 +31,14 @@ p {
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 0.48px;
-    font-weight: 500;
-    color: #ffffff;
+    font-weight: 500; 
+}
+
+.medium-text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.48px;
+    font-weight: 400; 
 }
 
 .button-style {
@@ -38,6 +53,7 @@ p {
     cursor: pointer; 
     display: inline-block;
     font-weight: 700;
+    margin: 30px 0;
 }
 
 .button-style:hover {
@@ -93,8 +109,7 @@ p {
     background-image: url(./bg-sec-img.png);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: contain; 
-    margin-bottom: 100px;
+    background-size: contain;  
 }
 
 .pet-food-content{
@@ -108,9 +123,15 @@ p {
     margin-bottom: 100px;
 }
 
-.pet-food-content p{
-    color: #173b33;
+/* Nutrition section */
+.nutrition-section{
+    background-color: #B6D4BA;
 }
-.pet-food-content h2{
-    color: #39383c;
+
+.nutrition-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 100px;
+    row-gap: 20px; 
+    padding: 20px;
 }

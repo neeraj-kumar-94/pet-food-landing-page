@@ -4,25 +4,26 @@
     box-sizing: border-box;
 }
 
-.text-wh{
+.text-wh {
     color: #fff;
 }
-.text-green{
+
+.text-green {
     color: #173b33;
     font-weight: 500;
 }
 
-.text-gray{
+.text-gray {
     color: #39383c;
 }
 
+.text-black {
+    color: #000000;
+}
 
-
-
- 
 .heading-h1 {
     font-size: 56px;
-    line-height: 70px; 
+    line-height: 70px;
     font-weight: 700;
     font-family: 'Source Serif Pro', serif;
 }
@@ -31,14 +32,14 @@
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 0.48px;
-    font-weight: 500; 
+    font-weight: 500;
 }
 
 .medium-text {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 26px;
     letter-spacing: 0.48px;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 .button-style {
@@ -50,10 +51,11 @@
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
-    cursor: pointer; 
+    cursor: pointer;
     display: inline-block;
     font-weight: 700;
     margin: 30px 0;
+    display: inline-block;
 }
 
 .button-style:hover {
@@ -69,7 +71,8 @@
 }
 
 .main .inner {
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
 }
 
 /* HERO SECTION */
@@ -78,42 +81,52 @@
     height: 700px;
     background-image: url(./hero-bg-img.png);
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 
-}
+} 
 
-.hero-inner-section {}
-
-.hero-sec-content { 
+.hero-sec-content {
     row-gap: 20px;
     max-width: 780px;
     width: 100%;
 }
 
-.hero-sec-content p{ 
+.hero-sec-content p {
     margin: 20px 0;
 }
 
 /* Ratings section */
-.ratings-section{
+.ratings-section {
     background-color: #f6f5f3;
 }
-.ratings-inner-img-text{
+
+.ratings-inner-img-text {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.rating-image {
+    position: relative;
+}
+
+.rating-image img {
+    width: 100%;
+    height: 100%;
 }
 
 /* Fres-pet-food section */
-.pet-food-sec{
+.pet-food-sec {
     background-image: url(./bg-sec-img.png);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: contain;  
+    background-size: contain;
 }
 
-.pet-food-content{
-    display: flex; 
+.pet-food-content {
+    display: flex;
     flex-direction: column;
     row-gap: 24px;
     text-align: center;
@@ -124,14 +137,178 @@
 }
 
 /* Nutrition section */
-.nutrition-section{
+.nutrition-section {
     background-color: #B6D4BA;
 }
 
 .nutrition-items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 100px;
-    row-gap: 20px; 
+    row-gap: 20px;
     padding: 20px;
+}
+
+.nut-sec-btn {
+    text-align: center;
+} 
+
+/* Customer Reviews section */
+.customer-reviews-sec {
+    background-color: #FFF2E2;
+}
+
+.customer-reviews-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 36px;
+}
+
+.customer-reviews-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    column-gap: 40px;
+    max-width: 681px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.customer-review-card-detail {
+    padding: 40px;
+}
+
+.cus-rev-sec-btn {
+    margin-top: 35px;
+    margin-bottom: -40px;
+    text-align: center;
+}
+
+/* Plan Works steps section */
+.plan-work-steps-sec {
+    background-color: #FFD9CC;
+}
+
+.plan-work-steps-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    align-items: start;
+    justify-items: center;
+}
+
+.plan-work-steps-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 35px;
+    max-width: 360px;
+    width: 100%;
+}
+
+.serial-number {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    background-color: #F16A4C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-arrow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-arrow::after {
+    content: url(./right-arrow01.png);
+    position: absolute;
+    left: 72px;
+    width: 50px !important;
+    height: auto;
+}
+
+.serial-number p {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Here’s why it is life changing section */
+.life-changing-inner-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 48px;
+} 
+.life-changing-img-cotnent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+} 
+
+/* Media query */
+@media (max-width: 1340px) {
+    /* Plan Works steps section */
+    .right-arrow::after {
+        content: url(./right-arrow.png);
+    }
+}
+@media (max-width: 1000px) {
+    .right-arrow::after {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    /* common css */
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 32px 24px;
+    }
+
+    .heading-h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .large-text {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .medium-text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    /* Nutrition section */
+    .nutrition-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* Here’s why it is life changing section */
+    .life-changing-img-cotnent {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 576px) {
+    /* Customer Reviews section */
+    .customer-reviews-card {
+        flex-direction: column;
+    }
+
+    .revers-card {
+        flex-direction: column-reverse;
+    }
 }

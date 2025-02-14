@@ -344,7 +344,7 @@
 
 @media(max-width: 576px) {
     .hero-section {
-        height: 90vh;
+        height: 85vh; 
     }
 
     /* Customer Reviews section */

@@ -8,9 +8,10 @@
     color: #fff;
 }
 
+/* heading color */
 .text-green {
     color: #173b33;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .text-gray {
@@ -54,7 +55,7 @@
     cursor: pointer;
     display: inline-block;
     font-weight: 700;
-    margin: 30px 0;
+    margin: 30px 0 0 0;
     display: inline-block;
 }
 
@@ -75,6 +76,9 @@
     width: 100%;
 }
 
+/* animation */
+
+
 /* HERO SECTION */
 .hero-section {
     width: 100%;
@@ -83,7 +87,7 @@
     background-size: cover;
     background-position: center;
 
-} 
+}
 
 .hero-sec-content {
     row-gap: 20px;
@@ -102,20 +106,20 @@
 
 .ratings-inner-img-text {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 20px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.rating-image {
-    position: relative;
+.rating-img-text {
+    flex: 1;
+    text-align: center;
 }
 
 .rating-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
+
 
 /* Fres-pet-food section */
 .pet-food-sec {
@@ -151,7 +155,7 @@
 
 .nut-sec-btn {
     text-align: center;
-} 
+}
 
 /* Customer Reviews section */
 .customer-reviews-sec {
@@ -171,19 +175,15 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    column-gap: 40px;
+    gap: 35px;
     max-width: 681px;
     width: 100%;
     border-radius: 20px;
-}
-
-.customer-review-card-detail {
     padding: 40px;
 }
-
+ 
 .cus-rev-sec-btn {
     margin-top: 35px;
-    margin-bottom: -40px;
     text-align: center;
 }
 
@@ -195,7 +195,8 @@
 .plan-work-steps-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 40px;
     align-items: start;
     justify-items: center;
 }
@@ -242,6 +243,11 @@
     font-weight: 700;
 }
 
+.plan-work-steps-card-det p:first-child{
+ margin-bottom: 8px;
+ font-weight: 700;
+}
+
 /* Here’s why it is life changing section */
 .life-changing-inner-sec {
     display: flex;
@@ -249,26 +255,47 @@
     align-items: center;
     flex-direction: column;
     row-gap: 48px;
-} 
+}
+
 .life-changing-img-cotnent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
-} 
+}
+
+/* support-section */
+.support-section {
+    background-color: #B6D4BA;
+}
+
+.support-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+}
+
+
 
 /* Media query */
 @media (max-width: 1340px) {
+
     /* Plan Works steps section */
     .right-arrow::after {
         content: url(./right-arrow.png);
     }
 }
+
 @media (max-width: 1000px) {
     .right-arrow::after {
         display: none;
     }
 }
+
 @media (max-width: 768px) {
+
     /* common css */
     .main {
         display: flex;
@@ -279,23 +306,36 @@
     }
 
     .heading-h1 {
-        font-size: 36px;
-        line-height: 44px;
+        font-size: 28px;
+        line-height: 36px;
     }
 
     .large-text {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .medium-text {
         font-size: 18px;
         line-height: 24px;
     }
 
-    .medium-text {
-        font-size: 16px;
-        line-height: 22px;
+    /* Plan works steps section  */
+    .plan-work-steps-card { 
+        row-gap: 16px; 
     }
+    
+
     /* Nutrition section */
     .nutrition-items {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    /* Fres-pet-food section */ 
+    .pet-food-content { 
+        margin-bottom: 60px;
+    }
+
     /* Here’s why it is life changing section */
     .life-changing-img-cotnent {
         grid-template-columns: 1fr;
@@ -303,10 +343,16 @@
 }
 
 @media(max-width: 576px) {
-    /* Customer Reviews section */
-    .customer-reviews-card {
-        flex-direction: column;
+    .hero-section {
+        height: 100vh;
     }
+
+    /* Customer Reviews section */
+    .customer-reviews-card { 
+        flex-direction: column;
+        gap: 25px; 
+        padding: 25px;
+    } 
 
     .revers-card {
         flex-direction: column-reverse;

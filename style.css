@@ -61,7 +61,6 @@
 
 .button-style:hover {
     background: #5D3E31;
-    ;
 }
 
 .main {
@@ -139,6 +138,10 @@
 }
 
 /* Customer Reviews section */
+.cust-rev-m-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
 .customer-reviews-cards {
     display: flex;
     justify-content: center;
@@ -146,7 +149,6 @@
     flex-direction: column;
     row-gap: 36px;
 }
-
 .customer-reviews-card {
     display: flex;
     justify-content: center;
@@ -316,7 +318,7 @@
 
     /* Nutrition section */
     .nutrition-items {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr); 
     }
 
     /* Fres-pet-food section */
@@ -325,7 +327,7 @@
     }
 
     .pet-food-content {
-        margin-bottom: 100px;
+        margin-bottom: 120px;
     }
 
     /* Here’s why it is life changing section */
@@ -335,11 +337,18 @@
 }
 
 @media(max-width: 576px) {
+    /* button css */
+    .button-style{
+        margin: 20px 0 0 0;
+    }
     .hero-section {
-        height: 85vh;
+        height: 82vh;
     }
 
     /* Customer Reviews section */
+    .cust-rev-m-heading { 
+        margin-bottom: 36px;
+    }
     .customer-reviews-card {
         flex-direction: column;
         gap: 25px;

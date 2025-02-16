@@ -6,27 +6,27 @@
 
 .text-wh {
     color: #fff;
+} 
+ 
+.sec_brown{
+    color: #7D5C4E;
 }
 
-/* heading color */
-.text-green {
-    color: #173b33;
-    font-weight: 700;
-}
-
-.text-gray {
-    color: #39383c;
-}
-
-.text-black {
-    color: #000000;
-}
+.dark_brown{
+    color: #352B26;
+    font-weight: 700 !important;
+} 
 
 .heading-h1 {
     font-size: 56px;
     line-height: 70px;
     font-weight: 700;
-    font-family: 'Source Serif Pro', serif;
+}
+
+.heading-h2{
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 700;
 }
 
 .large-text {
@@ -46,21 +46,22 @@
 .button-style {
     font-size: 16px;
     letter-spacing: .32px;
+    font-weight: 700;
     padding: 14px 24px;
-    background: #f2674b;
     color: #fff;
+    background: linear-gradient(90deg, #5D3E31 0%, #704B3B 24%, #855946 50%, #7D5C4E 100%);
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
-    font-weight: 700;
     margin: 30px 0 0 0;
     display: inline-block;
 }
 
 .button-style:hover {
-    background: #c94e3c
+    background: #5D3E31;
+    ;
 }
 
 .main {
@@ -75,9 +76,6 @@
     max-width: 1280px;
     width: 100%;
 }
-
-/* animation */
-
 
 /* HERO SECTION */
 .hero-section {
@@ -102,6 +100,7 @@
 /* Ratings section */
 .ratings-section {
     background-color: #f6f5f3;
+    display: none;
 }
 
 .ratings-inner-img-text {
@@ -142,7 +141,7 @@
 
 /* Nutrition section */
 .nutrition-section {
-    background-color: #B6D4BA;
+    background-color: #FDF8F7;
 }
 
 .nutrition-items {
@@ -153,15 +152,18 @@
     padding: 20px;
 }
 
+.nu-img-txt h2{
+    margin-bottom: 8px
+    
+    
+    ;
+}
+
 .nut-sec-btn {
     text-align: center;
 }
 
-/* Customer Reviews section */
-.customer-reviews-sec {
-    background-color: #FFF2E2;
-}
-
+/* Customer Reviews section */ 
 .customer-reviews-cards {
     display: flex;
     justify-content: center;
@@ -174,14 +176,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #FDF8F7;
     gap: 35px;
     max-width: 681px;
     width: 100%;
     border-radius: 20px;
     padding: 40px;
 }
- 
+
 .cus-rev-sec-btn {
     margin-top: 35px;
     text-align: center;
@@ -189,7 +191,12 @@
 
 /* Plan Works steps section */
 .plan-work-steps-sec {
-    background-color: #FFD9CC;
+    background-color: #FDF8F7;
+}
+
+.plan-works-main-heading {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .plan-work-steps-cards {
@@ -213,10 +220,10 @@
 }
 
 .serial-number {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
-    background-color: #F16A4C;
+    background-color: #6D4D3F;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,14 +245,13 @@
 }
 
 .serial-number p {
-    font-size: 36px;
+    font-size: 24px;
     color: #fff;
     font-weight: 700;
 }
 
-.plan-work-steps-card-det p:first-child{
- margin-bottom: 8px;
- font-weight: 700;
+.plan-work-steps-card-det p:first-child {
+    margin-bottom: 8px;
 }
 
 /* Here’s why it is life changing section */
@@ -265,7 +271,7 @@
 
 /* support-section */
 .support-section {
-    background-color: #B6D4BA;
+    background-color: #FDF8F7;
 }
 
 .support-section-content {
@@ -307,7 +313,14 @@
 
     .heading-h1 {
         font-size: 28px;
-        line-height: 36px;
+        line-height: 34.8px;
+        font-weight: 700;
+    }
+    
+    .heading-h2{
+        font-size: 26px;
+        line-height: 30px;
+        font-weight: 700;
     }
 
     .large-text {
@@ -321,18 +334,18 @@
     }
 
     /* Plan works steps section  */
-    .plan-work-steps-card { 
-        row-gap: 16px; 
+    .plan-work-steps-card {
+        row-gap: 16px;
     }
-    
+
 
     /* Nutrition section */
     .nutrition-items {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    /* Fres-pet-food section */ 
-    .pet-food-content { 
+    /* Fres-pet-food section */
+    .pet-food-content {
         margin-bottom: 60px;
     }
 
@@ -344,15 +357,15 @@
 
 @media(max-width: 576px) {
     .hero-section {
-        height: 85vh; 
+        height: 85vh;
     }
 
     /* Customer Reviews section */
-    .customer-reviews-card { 
+    .customer-reviews-card {
         flex-direction: column;
-        gap: 25px; 
+        gap: 25px;
         padding: 25px;
-    } 
+    }
 
     .revers-card {
         flex-direction: column-reverse;

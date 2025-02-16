@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", serif;
 }
 
 .text-wh {
@@ -245,6 +247,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
+    row-gap: 20px;
+}
+.life-changing-image{
+    position: relative;
+}
+.life-changing-image img{
+    width: 100%;
+    height: 100%;
 }
 
 /* support-section */
@@ -332,6 +342,9 @@
     }
 
     /* Here’s why it is life changing section */
+    .life-changing-inner-sec { 
+        row-gap: 36px;
+    }
     .life-changing-img-cotnent {
         grid-template-columns: 1fr;
     }

@@ -6,16 +6,16 @@
 
 .text-wh {
     color: #fff;
-} 
- 
-.sec_brown{
+}
+
+.sec_brown {
     color: #7D5C4E;
 }
 
-.dark_brown{
+.dark_brown {
     color: #352B26;
     font-weight: 700 !important;
-} 
+}
 
 .heading-h1 {
     font-size: 56px;
@@ -23,7 +23,7 @@
     font-weight: 700;
 }
 
-.heading-h2{
+.heading-h2 {
     font-size: 48px;
     line-height: 60px;
     font-weight: 700;
@@ -97,36 +97,14 @@
     margin: 20px 0;
 }
 
-/* Ratings section */
-.ratings-section {
-    background-color: #f6f5f3;
-    display: none;
-}
-
-.ratings-inner-img-text {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.rating-img-text {
-    flex: 1;
-    text-align: center;
-}
-
-.rating-image img {
-    width: 100%;
-    height: auto;
-}
-
-
 /* Fres-pet-food section */
 .pet-food-sec {
-    background-image: url(./bg-sec-img.png);
+    background-image: url("./pet-food.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: contain;
+    background-size: auto;
 }
+
 
 .pet-food-content {
     display: flex;
@@ -136,7 +114,7 @@
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 160px;
 }
 
 /* Nutrition section */
@@ -152,18 +130,15 @@
     padding: 20px;
 }
 
-.nu-img-txt h2{
-    margin-bottom: 8px
-    
-    
-    ;
+.nu-img-txt h2 {
+    margin-bottom: 8px;
 }
 
 .nut-sec-btn {
     text-align: center;
 }
 
-/* Customer Reviews section */ 
+/* Customer Reviews section */
 .customer-reviews-cards {
     display: flex;
     justify-content: center;
@@ -316,8 +291,8 @@
         line-height: 34.8px;
         font-weight: 700;
     }
-    
-    .heading-h2{
+
+    .heading-h2 {
         font-size: 26px;
         line-height: 30px;
         font-weight: 700;
@@ -345,8 +320,12 @@
     }
 
     /* Fres-pet-food section */
+    .pet-food-sec { 
+        background-size: contain;
+    }
+
     .pet-food-content {
-        margin-bottom: 60px;
+        margin-bottom: 100px;
     }
 
     /* Here’s why it is life changing section */

@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", serif;
 }
 
 .text-wh {
@@ -23,12 +21,14 @@
     font-size: 56px;
     line-height: 70px;
     font-weight: 700;
+    font-family: Roboto, sans-serif;
 }
 
 .heading-h2 {
     font-size: 48px;
     line-height: 60px;
     font-weight: 700;
+    font-family: Roboto, sans-serif;
 }
 
 .large-text {
@@ -36,6 +36,7 @@
     line-height: 34px;
     letter-spacing: 0.52px;
     font-weight: 500;
+    font-family: "Harmonia Sans", sans-serif;
 }
 
 .medium-text {
@@ -43,6 +44,7 @@
     line-height: 32px;
     letter-spacing: 0.48px;
     font-weight: 400;
+    font-family: "Harmonia Sans", sans-serif;
 }
 
 
@@ -83,7 +85,7 @@
 .hero-section {
     width: 100%;
     height: 700px;
-    background-image: url(./hero-bg-img.png);
+    background-image: url(https://cdn.shopify.com/s/files/1/0745/7059/6644/files/hero-section.webp?v=1739793193);
     background-size: cover;
     background-position: center;
 
@@ -91,7 +93,7 @@
 
 .hero-sec-content {
     row-gap: 20px;
-    max-width: 780px;
+    max-width: 820px;
     width: 100%;
 }
 
@@ -101,7 +103,7 @@
 
 /* Fres-pet-food section */
 .pet-food-sec {
-    background-image: url("./pet-food.png");
+    background-image: url(https://cdn.shopify.com/s/files/1/0745/7059/6644/files/pet-food.webp?v=1739791447);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: auto;
@@ -131,8 +133,15 @@
     row-gap: 20px;
     padding: 20px;
 }
+/* add code */
+.nutrition-item-box{
+    display: flex;
+    justify-content: center;
+    gap: 12px;;
+}
+/* add code */
 
-.nu-img-txt h2 {
+.nu-details h2 {
     margin-bottom: 8px;
 }
 
@@ -145,28 +154,128 @@
     text-align: center;
     margin-bottom: 40px;
 }
-.customer-reviews-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 36px;
-}
-.customer-reviews-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FDF8F7;
-    gap: 35px;
-    max-width: 681px;
-    width: 100%;
-    border-radius: 20px;
-    padding: 40px;
-}
 
 .cus-rev-sec-btn {
     margin-top: 35px;
     text-align: center;
+}
+
+.cards-carousel {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+
+}
+
+.cards-carousel .arrow {
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.cards-carousel .left-arrow {
+    left: -22px;
+
+}
+
+.cards-carousel .right_arrow {
+    right: -22px;
+
+}
+
+.cards-carousel .customer-reviews-cards {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0; 
+}
+
+.customer-reviews-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.customer-reviews-cards :where(.card-box, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-reviews-cards.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.customer-reviews-cards.no-transition {
+    scroll-behavior: auto;
+}
+
+.customer-reviews-cards.dragging .card-box {
+    cursor: grab;
+    user-select: none;
+}
+
+.customer-reviews-cards .card-box {
+    scroll-snap-align: start; 
+    height: auto;
+    list-style: none; 
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    width: 98%;
+    padding-bottom: 15px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column; 
+    background-color: #FDF8F7;
+    row-gap: 10px;;
+    padding: 25px;
+    box-shadow: 0px 4px 10px rgba(253, 248, 247, 0.8);
+    border-radius: 8px;;
+}
+
+.auther-img-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;;
+}
+
+.auth-name-ratings p{
+    font-size: 20px;
+}
+
+.auther-image img{
+    border-radius: 100%; 
+}
+
+.customer-review-card-detail P:first-child{
+    font-size: 20px;
+}
+.customer-review-card-detail P:last-child{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 900px) {
+    .cards-carousel .customer-reviews-cards {
+        grid-auto-columns: calc((100% / 2) - 9px);
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cards-carousel .customer-reviews-cards {
+        grid-auto-columns: 100%;
+
+    }
 }
 
 /* Plan Works steps section */
@@ -217,7 +326,7 @@
 }
 
 .right-arrow::after {
-    content: url(./right-arrow01.png);
+    content: url(https://cdn.shopify.com/s/files/1/0745/7059/6644/files/right-arrow01.webp?v=1739791531);
     position: absolute;
     left: 72px;
     width: 50px !important;
@@ -249,10 +358,12 @@
     column-gap: 80px;
     row-gap: 20px;
 }
-.life-changing-image{
+
+.life-changing-image {
     position: relative;
 }
-.life-changing-image img{
+
+.life-changing-image img {
     width: 100%;
     height: 100%;
 }
@@ -278,7 +389,7 @@
 
     /* Plan Works steps section */
     .right-arrow::after {
-        content: url(./right-arrow.png);
+        content: url(https://cdn.shopify.com/s/files/1/0745/7059/6644/files/right-arrow.webp?v=1739791447);
     }
 }
 
@@ -329,11 +440,12 @@
 
     /* Nutrition section */
     .nutrition-items {
-        grid-template-columns: repeat(1, 1fr); 
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px;;
     }
 
     /* Fres-pet-food section */
-    .pet-food-sec { 
+    .pet-food-sec {
         background-size: contain;
     }
 
@@ -342,34 +454,32 @@
     }
 
     /* Here’s why it is life changing section */
-    .life-changing-inner-sec { 
+    .life-changing-inner-sec {
         row-gap: 36px;
     }
+
     .life-changing-img-cotnent {
         grid-template-columns: 1fr;
     }
 }
 
 @media(max-width: 576px) {
+
     /* button css */
-    .button-style{
+    .button-style {
         margin: 20px 0 0 0;
     }
+
     .hero-section {
         height: 82vh;
     }
 
     /* Customer Reviews section */
-    .cust-rev-m-heading { 
+    .cust-rev-m-heading {
         margin-bottom: 36px;
-    }
-    .customer-reviews-card {
-        flex-direction: column;
-        gap: 25px;
-        padding: 25px;
     }
 
     .revers-card {
         flex-direction: column-reverse;
     }
-}
+} 
